@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Input;
 
 trait Sluggable {
 
@@ -17,7 +18,10 @@ trait Sluggable {
 
 		$callback = function(Model $model) use ($name, $slug)
 		{
-			$model->$slug = Str::slug($model->$name);
+			$input_slug = Input::get($slug);
+			if($input_slug){
+				$model->$slug = $input_slug;
+			}else $model->$slug = Str::slug($model->$name);
 		};
 
 		static::registerModelEvent('saving', $callback, 0);
