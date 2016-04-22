@@ -1,14 +1,18 @@
 {
 	"name": "gurzhii/laravel-sluggable-trait",
 	"description": "A trait you can apply to Eloquent models to have slugs automatically generated on save.",
-	"version": "0.2.1",
+	"version": "1.0.0",
 	"type": "library",
-	"keywords": ["laravel", "eloquent"],
+	"keywords": ["laravel", "eloquent", "sluggable"],
 	"license": "MIT",
 	"authors": [
 		{
 			"name": "Martin Bean",
 			"email": "martin@martinbean.co.uk"
+		},
+		{
+			"name": "Gurzhii Dmitriy",
+			"email": "gurzhii.dmitriy@gmail.com"
 		}
 	],
 	"require": {
