@@ -4,7 +4,7 @@ A trait you can apply to Eloquent models to have slugs automatically generated o
 
 ## Installation
 
-    $ composer require martinbean/laravel-sluggable-trait
+    $ composer require gurzhii/laravel-sluggable-trait
 
 ## Usage
 
