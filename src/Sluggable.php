@@ -21,7 +21,11 @@ trait Sluggable {
 			$input_slug = Input::get($slug);
 			if($input_slug){
 				$model->$slug = $input_slug;
-			}else $model->$slug = Str::slug($model->$name);
+			}else{
+				if($model->$slug == ''){
+					$model->$slug = Str::slug($model->$name);
+				}
+			}
 		};
 
 		static::registerModelEvent('saving', $callback, 0);
